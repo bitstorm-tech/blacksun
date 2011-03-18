@@ -1,0 +1,11 @@
+<blacksunConfig>
+	<server>
+		<host>localhost</host>
+		<port>2323</port>
+	</server>
+	
+	<logging>
+		<appenderTypes>CONSOLE, FILE</appenderTypes>
+		<logFile>log/blacksun.log</logFile>
+	</logging>
+</blacksunConfig>
