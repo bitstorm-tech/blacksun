@@ -1,10 +1,8 @@
-#include "../utils/CmdArguments.h"
-#include "../utils/ConfigFileParser.h"
-#include "../server/Server.h"
-#include "../client/Client.h"
-#include "../utils/logging/Logger.h"
-#include "../utils/logging/ConsoleAppender.h"
-#include "../utils/logging/FileAppender.h"
+#include "CmdArguments.h"
+#include "ConfigFileParser.h"
+#include "Server.h"
+#include "Client.h"
+#include "Logger.h"
 #include <iostream>
 
 using namespace std;

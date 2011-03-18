@@ -1,6 +1,6 @@
 #pragma once
 
-#include "logging/Logger.h"
+#include "Logger.h"
 #include <string>
 #include <boost/property_tree/xml_parser.hpp>
 

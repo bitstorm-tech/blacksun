@@ -1,5 +1,5 @@
 #include "Server.h"
-#include "../utils/logging/Logger.h"
+#include "Logger.h"
 #include <iostream>
 #include <sstream>
 

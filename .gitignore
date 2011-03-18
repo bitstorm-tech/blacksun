@@ -1,4 +1,4 @@
 
-/.cproject
-/.project
-/Debug
+*/.cproject
+*/.project
+*/Debug

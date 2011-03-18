@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../utils/logging/Logger.h"
+#include "Logger.h"
 
 namespace blacksun {
 
