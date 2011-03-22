@@ -92,7 +92,7 @@ namespace blacksun {
 		stringstream stream;
 		stream << getTimeString();
 		stream << " ";
-		stream << "[" << logLevel << "]";
+		stream << logLevel;
 		stream << space;
 		stream << "[" << this->className << "]";
 		stream << " ";
