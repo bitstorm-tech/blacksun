@@ -21,6 +21,6 @@ namespace blacksun {
 		std::string format(std::string logLevel, std::string message);
 		void log(std::string message);
 		static std::list<Appender*> appenderList;
-		//static bool initialized;
+		static bool initialized;
 	};
 }

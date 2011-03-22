@@ -13,7 +13,7 @@ using namespace xml_parser;
 
 namespace blacksun {
 	list<Appender*> Logger::appenderList;
-	//bool Logger::initialized = false;
+	bool Logger::initialized = false;
 
 	Logger::Logger(string className) {
 		this->className = className;
@@ -25,7 +25,7 @@ namespace blacksun {
 	}
 
 	void Logger::init() {
-		//if(!Logger::initialized) {
+		if(!Logger::initialized) {
 			ptree config;
 			read_xml("conf/config.xml", config, trim_whitespace && no_comments && no_concat_text);
 			string appenderTypes = config.get<string>("blacksunConfig.logging.appenderTypes.<xmltext>");
@@ -43,8 +43,8 @@ namespace blacksun {
 
 				++it;
 			}
-			//Logger::initialized = false;
-		//}
+			Logger::initialized = true;
+		}
 	}
 
 	void Logger::addAppender(Appender* appender) {
