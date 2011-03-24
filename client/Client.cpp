@@ -14,10 +14,9 @@ namespace blacksun {
 	void Client::start() {
 		logger.info("starting client");
 
-		io_service service;
-		tcp::resolver(service);
+		io_service io_service;
+		tcp::resolver resolver(io_service);
 		tcp::resolver::query query("localhost");
-
 
 		logger.info("stopping client");
 	}

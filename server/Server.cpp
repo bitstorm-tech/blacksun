@@ -1,5 +1,4 @@
 #include "Server.h"
-#include "Logger.h"
 #include <boost/asio.hpp>
 
 using namespace std;
@@ -9,9 +8,10 @@ using namespace ip;
 
 namespace blacksun {
 
-	void Server::start() {
-		Logger logger("Server");
+	Server::Server() : logger("Server") {
+	}
 
+	void Server::start() {
 		logger.info("starting server");
 
 		io_service io_service;
