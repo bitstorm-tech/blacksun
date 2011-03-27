@@ -21,7 +21,11 @@ namespace blacksun {
 			logger.info("listening for new connection...");
 
 			tcp::socket socket(io_service);
+			acceptor.listen();
 			acceptor.accept(socket);
+			write(socket, buffer("welcome!"));
+
+			logger.info("client connected");
 
 
 		}
