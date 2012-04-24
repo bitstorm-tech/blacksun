@@ -1,4 +1,5 @@
 #include "Server.h"
+#include "ConfigFileParser.h"
 #include <boost/asio.hpp>
 
 using namespace std;
@@ -14,11 +15,16 @@ namespace blacksun {
 	void Server::start() {
 		logger.info("starting server");
 
+		ConfigFileParser configFile;
+		configFile.read();
+		string portString = configFile.getValue("blacksunConfig.server.port.<xmltext>");
+		int port = atoi(portString.c_str());
+
 		io_service io_service;
-		tcp::acceptor acceptor(io_service, tcp::endpoint(tcp::v4(), 4711));
+		tcp::acceptor acceptor(io_service, tcp::endpoint(tcp::v4(), port));
 
 		while(true) {
-			logger.info("listening for new connection...");
+			logger.info("listening on port " + portString + " for new connection...");
 
 			tcp::socket socket(io_service);
 			acceptor.listen();
