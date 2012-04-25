@@ -4,3 +4,6 @@
 */.project
 */Debug
 /_output
+Debug/*
+
+/blacksun.opensdf

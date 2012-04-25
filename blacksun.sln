@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual C++ Express 2010
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "client", "client\client.vcxproj", "{84AC7D07-9447-422C-8CDA-BFAD237DFC23}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "logging", "logging\logging.vcxproj", "{D1BE5501-8A4A-499E-9A1D-7D1D377AF943}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "main", "main\main.vcxproj", "{BD399B1A-82DA-4DBB-AD25-4237F09920C0}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "server", "server\server.vcxproj", "{DD5D8061-CB05-4011-AA22-CCB7928EDC77}"
@@ -21,10 +19,6 @@ Global
 		{84AC7D07-9447-422C-8CDA-BFAD237DFC23}.Debug|Win32.Build.0 = Debug|Win32
 		{84AC7D07-9447-422C-8CDA-BFAD237DFC23}.Release|Win32.ActiveCfg = Release|Win32
 		{84AC7D07-9447-422C-8CDA-BFAD237DFC23}.Release|Win32.Build.0 = Release|Win32
-		{D1BE5501-8A4A-499E-9A1D-7D1D377AF943}.Debug|Win32.ActiveCfg = Debug|Win32
-		{D1BE5501-8A4A-499E-9A1D-7D1D377AF943}.Debug|Win32.Build.0 = Debug|Win32
-		{D1BE5501-8A4A-499E-9A1D-7D1D377AF943}.Release|Win32.ActiveCfg = Release|Win32
-		{D1BE5501-8A4A-499E-9A1D-7D1D377AF943}.Release|Win32.Build.0 = Release|Win32
 		{BD399B1A-82DA-4DBB-AD25-4237F09920C0}.Debug|Win32.ActiveCfg = Debug|Win32
 		{BD399B1A-82DA-4DBB-AD25-4237F09920C0}.Debug|Win32.Build.0 = Debug|Win32
 		{BD399B1A-82DA-4DBB-AD25-4237F09920C0}.Release|Win32.ActiveCfg = Release|Win32
