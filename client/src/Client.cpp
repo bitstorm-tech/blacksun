@@ -32,7 +32,7 @@ namespace blacksun {
 			tcp::resolver::iterator it = resolver.resolve(query);
 			tcp::socket socket(io_service);
 			socket.connect(*it);
-			array<char, 512> array;
+			boost::array<char, 512> array;
 			size_t len = socket.read_some(buffer(array));
 
 			stringstream stream;

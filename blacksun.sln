@@ -2,10 +2,21 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual C++ Express 2010
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "client", "client\client.vcxproj", "{84AC7D07-9447-422C-8CDA-BFAD237DFC23}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8409B44A-76F0-4595-9178-30DA16FFA408} = {8409B44A-76F0-4595-9178-30DA16FFA408}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "main", "main\main.vcxproj", "{BD399B1A-82DA-4DBB-AD25-4237F09920C0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{84AC7D07-9447-422C-8CDA-BFAD237DFC23} = {84AC7D07-9447-422C-8CDA-BFAD237DFC23}
+		{8409B44A-76F0-4595-9178-30DA16FFA408} = {8409B44A-76F0-4595-9178-30DA16FFA408}
+		{DD5D8061-CB05-4011-AA22-CCB7928EDC77} = {DD5D8061-CB05-4011-AA22-CCB7928EDC77}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "server", "server\server.vcxproj", "{DD5D8061-CB05-4011-AA22-CCB7928EDC77}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8409B44A-76F0-4595-9178-30DA16FFA408} = {8409B44A-76F0-4595-9178-30DA16FFA408}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "utils", "utils\utils.vcxproj", "{8409B44A-76F0-4595-9178-30DA16FFA408}"
 EndProject

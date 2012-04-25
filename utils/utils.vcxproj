@@ -37,8 +37,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>D:\projects\boost_1_49_0;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\projects\boost_1_49_0\bin.v2\libs\system\build\msvc-10.0\debug\link-static\threading-multi;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(BOOST_HOME);$(IncludePath)</IncludePath>
+    <LibraryPath>$(BOOST_DEBUG_LIB_DIRS);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

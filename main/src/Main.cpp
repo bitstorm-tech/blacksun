@@ -8,21 +8,24 @@
 using namespace std;
 using namespace blacksun;
 
-ConfigFileParser config;
-
 int main(int argc, char* argv[]) {
-	CmdArguments cmdArgs;
-	cmdArgs.parse(argc, argv);
+	try {
+		CmdArguments cmdArgs;
+		cmdArgs.parse(argc, argv);
 
-	Logger logger("Main");
+		Logger logger("Main");
+		logger.info("Starting Blacksun...");
 
-	if(cmdArgs.contains("-s")) {
-		Server server;
-		server.start();
-	} else if(cmdArgs.contains("-c")) {
-		Client client;
-		client.start();
-	}
+		if(cmdArgs.contains("-s")) {
+			Server server;
+			server.start();
+		} else if(cmdArgs.contains("-c")) {
+			Client client;
+			client.start();
+		}
+	} catch( std::exception &e ) { 
+        cout << e.what(); 
+    } 
 
 	return 0;
 }
