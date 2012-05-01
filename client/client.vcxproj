@@ -37,7 +37,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(BOOST_HOME);$(MSBuildStartupDirectory)\utils\src;$(IncludePath)</IncludePath>
+    <IncludePath>$(BOOST_HOME);$(ProjectDir)\..\utils\src;$(IncludePath)</IncludePath>
     <LibraryPath>$(BOOST_DEBUG_LIB_DIRS);$(OutDir);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

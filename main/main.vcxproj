@@ -38,7 +38,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
-    <IncludePath>d:\projects\blacksun\utils\src;$(MSBuildStartupDirectory)\client\src;$(MSBuildStartupDirectory)\server\src;$(BOOST_HOME);$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)\..\utils\src;$(ProjectDir)\..\client\src;$(ProjectDir)\..\server\src;$(BOOST_HOME);$(IncludePath)</IncludePath>
     <LibraryPath>$(OutDir);$(BOOST_DEBUG_LIB_DIRS);$(LibraryPath)</LibraryPath>
     <TargetName>blacksun</TargetName>
   </PropertyGroup>
