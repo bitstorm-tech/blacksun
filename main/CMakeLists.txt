@@ -6,7 +6,7 @@ include_directories(
 /home/joe/projects/boost_1_48_0
 )
 
-file(GLOB SOURCES *.cpp)
+file(GLOB SOURCES src/*.cpp)
 
 add_executable(blacksun ${SOURCES})
 

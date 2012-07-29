@@ -7,7 +7,6 @@ SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/bin)
 
 FILE(COPY ${CMAKE_CURRENT_SOURCE_DIR}/resources/conf DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/bin)
 
-add_subdirectory(logging)
 add_subdirectory(utils)
 add_subdirectory(server)
 add_subdirectory(client)
