@@ -22,6 +22,10 @@ int main(int argc, char* argv[]) {
 		} else if(cmdArgs.contains("-c")) {
 			Client client;
 			client.start();
+		} else {
+			logger.info("Plese use one the following arguments: ");
+			logger.info("-s for starting in server mode");
+			logger.info("-c for starting in client mode");
 		}
 	} catch( std::exception &e ) { 
         cout << e.what(); 

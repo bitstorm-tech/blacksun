@@ -1,6 +1,5 @@
 #include "Server.h"
 #include "ConfigFileParser.h"
-#include <boost/asio.hpp>
 
 using namespace std;
 using namespace boost;
@@ -9,34 +8,47 @@ using namespace ip;
 
 namespace blacksun {
 
-	Server::Server() : logger("Server") {
-	}
+	Server::Server() :
+	_logger("Server"),
+	_ioService(new io_service)
+	{}
 
 	void Server::start() {
-		logger.info("starting server");
+		init();
+		
+		io_service::work worker(*_ioService);
 
-		ConfigFileParser configFile;
-		configFile.read();
-		string portString = configFile.getValue("blacksunConfig.server.port.<xmltext>");
-		int port = atoi(portString.c_str());
+		_logger.info("starting server");
+		_ioService->poll();
+		_logger.info("IO Service started");
 
-		io_service io_service;
-		tcp::acceptor acceptor(io_service, tcp::endpoint(tcp::v4(), port));
-
+		tcp::acceptor acceptor(*_ioService, tcp::endpoint(tcp::v4(), _port));
+		/**
 		while(true) {
-			logger.info("listening on port " + portString + " for new connection...");
 
-			tcp::socket socket(io_service);
-			acceptor.listen();
-			acceptor.accept(socket);
-			write(socket, buffer("welcome!"));
-
-			logger.info("client connected");
-
-
+			//tcp::socket socket(_ioService);
+			//acceptor.listen();
+			//acceptor.accept(socket);
+			//tcp_connection::pointer new_connection = tcp_connection::create(acceptor.get_io_service());
+			//acceptor.async_accept(new_connection->socket(), boost::bind(&tcp_server::handle_accept, this, new_connection, boost::asio::placeholders::error));
+			//write(socket, buffer("welcome!"));
+			//_logger.info("client connected");
 		}
+		*/
 
-		logger.info("shutdown server");
+		_logger.info("shutdown server");
 	}
 
+	void Server::init() {
+		ConfigFileParser configFile;
+		configFile.read();
+		const string portString = configFile.getValue("blacksunConfig.server.port.<xmltext>");
+		_port = atoi(portString.c_str());
+		
+		stringstream sstream;
+		sstream << "listening on port ";
+		sstream << _port;
+		sstream << " for new connections";
+		_logger.info( sstream.str() );
+	}
 }

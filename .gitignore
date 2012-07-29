@@ -7,3 +7,6 @@
 Debug/*
 
 /blacksun.opensdf
+ipch
+CMakeFiles
+CMakeCache.txt

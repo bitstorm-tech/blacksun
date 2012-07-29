@@ -44,8 +44,9 @@ namespace blacksun {
 			logger.info("stopping client");
 		} catch(std::exception& e) {
 			stringstream stream;
-			stream << "could not establish connection to server because of: ";
+			stream << "could not establish connection to server because of: '";
 			stream << e.what();
+			stream << "'";
 			logger.error(stream.str());
 		}
 	}
