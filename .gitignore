@@ -5,7 +5,6 @@
 */Debug
 /_output
 Debug/*
-
 /blacksun.opensdf
 ipch
 CMakeFiles
@@ -13,3 +12,4 @@ CMakeCache.txt
 Makefile
 bin
 *.cmake
+lib
